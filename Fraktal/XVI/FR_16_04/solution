@@ -1,0 +1,42 @@
+#include <iostream>
+#include <istream>
+#include <fstream>
+#include <cstdio>
+#include <iomanip>
+#include <map>
+#include <set>
+#include <list>
+#include <vector>
+#include <stack>
+#include <algorithm>
+#include <iterator>
+#include <math.h>
+#include <queue>
+#include <iomanip>
+#include <string>
+#include <climits>
+
+using namespace std;
+
+//ios_base::sync_with_stdio(0);
+
+int main() {
+    cout<<setprecision(2)<<fixed;
+    int eggQty;
+    double result = 0;
+    cin >> eggQty;
+
+    if (eggQty >= 1000) {
+        result += 500 + (eggQty - 1000) * 1.00;
+        cout << result;
+    } else {
+        double factor = eggQty / 100;
+        double change = eggQty % 100;
+        factor *= 0.05;
+
+        result = eggQty * factor;
+        cout << result;
+    }
+
+
+}
